@@ -20,12 +20,16 @@ import { AuthGuards } from './guards/auth.guard.services';
 
 import { UserServices } from './services/user.services';
 
+import { ListCreatorComponent } from './creator/list.creator.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RegistrerComponent
+    RegistrerComponent,
+    ListCreatorComponent
 
   ],
   imports: [
