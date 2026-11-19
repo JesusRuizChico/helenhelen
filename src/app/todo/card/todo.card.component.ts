@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from "@angular/core";
 // Asegúrate de importar TStatus (o como se llame tu enum/tipo) desde el archivo correspondiente
 import { ITodo, TStatus } from "../../structures/todos"; 
 import { trigger, state, style, animate, transition } from "@angular/animations";
+import { TodoService } from "../../services/todos.service";
 
 @Component({
     selector: 'todo-card',
@@ -37,12 +38,16 @@ import { trigger, state, style, animate, transition } from "@angular/animations"
 })
 export class TodoCardComponent implements OnInit {
     @Input() todo!: ITodo;
+    @Input() listId!: string;
     public press: string = 'up';
+
+    constructor(private todoS: TodoService) { }
 
     ngOnInit(): void {
     }
 
     completed() {
         this.todo.status = TStatus.Completed; 
+        this.todoS.update(this.listId, this.todo);
     }
 }
