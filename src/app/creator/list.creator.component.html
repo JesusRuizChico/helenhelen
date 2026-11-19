@@ -1,7 +1,7 @@
 <div class="large-padding">   
-    <input type="text" placeholder="Nombre de la lista">
+    <input type="text" placeholder="Nombre de la lista" [(ngModel)]="list.title">
     <div class="top-space">
-        <button type="button" class="btn blue">
+        <button type="button" class="btn blue" (click)="save()">
             <i class="fa fa-plus"></i>
         </button>
     </div>
