@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-faamily : Arial, Helvetica, sans-serif;
+    font-family : Arial, Helvetica, sans-serif;
 }
 .float-right{
     float: right;
@@ -11,6 +11,11 @@ body {
 }
 
 .nav-title{
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }

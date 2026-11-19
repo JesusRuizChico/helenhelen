@@ -4,7 +4,7 @@
 @import 'font-awesome/css/font-awesome.css';
 
 .large-padding {
-  float: 10 px 15 px;
+  padding: 10px 25px;
 }
 .float-right {
   float: right;
@@ -14,12 +14,117 @@
   font-size: 0.8rem;
 }
 
-.main-nav{
+.main-nav .float-right a{
   margin-left: 1em;
 }
 
 .main-nav a {
-    text-decoration : none;
+  text-decoration: none;
 }
 
+.form-control {
+  width: 100%;
+  outline: 0;
+  border: 0;
+  display: block;
+  padding: 10px 15px;
+  margin-top: 1rem;
+  font-size: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-sizing: border-box;
+}
 
+.btn{
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  padding: 1em 1.5em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  font-size: 1rem;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.top-space{
+  margin-top: 1.25rem;
+}
+
+.card{
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  position: relative;
+  padding: 1.2rem 1.6rem;
+}
+
+.card.with-badge{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-areas: "title title title title title title title title badge badge";
+  align-items: center;
+}
+
+.card.with-badge h4{
+  grid-area: title;
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+  align-self: center;
+}
+
+.card.with-badge .badge{
+  grid-area: badge;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card.with-badge .badge span{
+  height: 2.6em;
+  width: 2.6em;
+  border-radius: 50%;
+  font-size: 0.85em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lateral-padding{
+  padding: 0 8px;
+}
+
+.no-background{
+  background: transparent;
+}
+
+button.no-background{
+  font-size: 1rem;
+  outline: 0;
+  border: 0;
+}
+.text-right{
+  text-align: right;
+}
+.overflow-hidden{
+  overflow: hidden;
+}
+.todo-card{
+  /*transform: translateY(-10px);*/
+  position: relative;
+}
+.todo-card::after{
+  position: absolute;
+  z-index: -1;
+  content: '\f0f3';
+  font-family: 'FontAwesome';
+  top: 50%;
+  right: -2em;
+  font-weight: bold;
+  color:#18CDCA;
+}

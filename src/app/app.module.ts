@@ -21,15 +21,25 @@ import { AuthGuards } from './guards/auth.guard.services';
 import { UserServices } from './services/user.services';
 
 import { ListCreatorComponent } from './creator/list.creator.component';
-
-
+import { ListCreator2Component } from './creator2/list.creator2.component';
+import { FormsModule } from '@angular/forms';
+import { ListService } from './services/list.service';
+import { ListComponent } from './creator/list/list.component';
+import { TodosCreatorComponent } from './todo/creator/todos.creator.component';
+import { TodoService } from './services/todos.service';
+import { TodoCardComponent } from './todo/card/todo.card.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
     RegistrerComponent,
-    ListCreatorComponent
+    ListCreatorComponent,
+    ListCreator2Component,
+    ListComponent,
+    TodosCreatorComponent,
+    TodoCardComponent
 
   ],
   imports: [
@@ -39,9 +49,10 @@ import { ListCreatorComponent } from './creator/list.creator.component';
     AngularFireAuthModule,
     TransferHttpCacheModule,
     AngularFirestoreModule,
-
+    FormsModule,
+    BrowserAnimationsModule,
   ],
-  providers: [AuthServices, AuthGuards, UserServices],
+  providers: [AuthServices, AuthGuards, UserServices, ListService, TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
